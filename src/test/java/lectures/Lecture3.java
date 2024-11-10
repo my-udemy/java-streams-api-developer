@@ -9,6 +9,10 @@ import org.junit.Test;
 
 public class Lecture3 {
 
+  /**
+   * Given a list of number
+   * get the smallest one
+   * */
   @Test
   public void min() throws Exception {
     final List<Integer> numbers = ImmutableList.of(1, 2, 3, 100, 23, 93, 99);
@@ -16,6 +20,10 @@ public class Lecture3 {
     assertThat(1).isEqualTo(min);
   }
 
+  /**
+   * Given a list of numbers
+   * get the greatest one
+   * */
   @Test
   public void max() throws Exception {
     final List<Integer> numbers = ImmutableList.of(1, 2, 3, 100, 23, 93, 99);

@@ -12,6 +12,12 @@ public class Lecture6 {
 
   final Predicate<Integer> numbersLessThan10 = n -> n > 5 && n < 10;
 
+  /**
+   * Given an array of {@link Integer}
+   * filter the elements whose value is less than 10
+   * and find whatever element that matches the condition
+   * otherwise return zero
+   * */
   @Test
   public void findAny() throws Exception {
     Integer[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
@@ -23,6 +29,12 @@ public class Lecture6 {
     assertThat(any).isEqualTo(1);
   }
 
+  /**
+   * Given an array of {@link Integer}
+   * filter the elements whose value is less than 10
+   * and find the first element that matches the condition
+   * otherwise return zero
+   * */
   @Test
   public void findFirst() throws Exception {
     Integer[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};

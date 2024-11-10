@@ -15,6 +15,12 @@ import org.junit.Test;
 
 public class Lecture5 {
 
+  /**
+   * Given a List<Car>
+   * filter the ones whose price is less than 1000 USD
+   * and collect the result in a new List<Car>
+   * and print out the new List<Car>.
+   * */
   @Test
   public void understandingFilter() throws Exception {
     ImmutableList<Car> cars = MockData.getCars();
@@ -25,6 +31,12 @@ public class Lecture5 {
     carsUnder1000.stream().forEach(car -> System.out.println(car));
   }
 
+  /**
+   * Given a List<Person>
+   * transform every {@link Person} into a {@link PersonDTO} object
+   * and collect the result in a new List<PersonDTO>
+   * and expect that the new List<PersonDTO> size is equal the original List<Person>
+   * */
   @Test
   public void ourFirstMapping() throws Exception {
     // transform from one data type to another
@@ -37,6 +49,12 @@ public class Lecture5 {
     assertThat(dtos.size()).isEqualTo(1000);
   }
 
+  /**
+   * Given a List<Car>
+   * transform {@link Car#getPrice()} into a {@link Double}
+   * and computes the average price
+   * and returns a double value
+   * */
   @Test
   public void averageCarPrice() throws Exception {
     // calculate average of car prices

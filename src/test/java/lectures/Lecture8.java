@@ -14,6 +14,12 @@ import org.junit.Test;
 
 public class Lecture8 {
 
+  /**
+   * Given a List<{@link Car}>
+   *     group {@link Car} by {@link Car#getMake()}
+   *     and return a Map<String, List<Car>> whose key is {@link Car#getMake()}
+   *     and print out the Map<String, List<Car>>
+   * */
   @Test
   public void simpleGrouping() throws Exception {
     Map<String, List<Car>> grouping = MockData.getCars().stream().collect(Collectors.groupingBy(car -> car.getMake()));
@@ -23,6 +29,12 @@ public class Lecture8 {
     });
   }
 
+  /**
+   * Given a List<{@link String}>
+   *     group {@link Car} by duplicates
+   *     and return a Map<String, List<Car>> whose key is {@link String}
+   *     and value is the number of coincidences of the given String in the original List<{@link String}>
+   * */
   @Test
   public void groupingAndCounting() throws Exception {
     ArrayList<String> names = Lists
@@ -41,7 +53,6 @@ public class Lecture8 {
     counts.forEach((key, value) -> {
       System.out.println(key + ": " + value);
     });
-
   }
 
 }

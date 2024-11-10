@@ -21,6 +21,7 @@ public class Lecture10 {
     System.out.println(arrayListOfNames);
   }
 
+
   @Test
   public void withoutFlatMap() throws Exception {
     //[Mariam, Alex, Ismail, John, Alesha, Andre, Susy, Ali]
@@ -28,7 +29,6 @@ public class Lecture10 {
       lista.addAll(listb);
       return lista;
     });
-
     System.out.println(combined);
 
   }

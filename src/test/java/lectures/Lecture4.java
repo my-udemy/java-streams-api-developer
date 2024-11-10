@@ -11,6 +11,11 @@ import org.junit.Test;
 
 public class Lecture4 {
 
+  /**
+   * Given a List<Integer>
+   * remove the duplicates
+   * and collect the result in a new list
+   * */
   @Test
   public void distinct() throws Exception {
     final List<Integer> numbers = ImmutableList.of(1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 9, 9, 9);
@@ -19,6 +24,11 @@ public class Lecture4 {
     differentNumbers.stream().forEach(number -> System.out.println(number));
   }
 
+  /**
+   * Given a list of numbers
+   * remove the duplicates
+   * and collect the result in a new set
+   * */
   @Test
   public void distinctWithSet() throws Exception {
     final List<Integer> numbers = ImmutableList.of(1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 9, 9, 9);

@@ -15,6 +15,11 @@ import org.junit.Test;
 
 public class Lecture7 {
 
+  /**
+   * Given a List<Person>
+   *     filter the ones whose age is greater than 18
+   *     and return the count of matching elements.
+   * */
   @Test
   public void count() throws Exception {
     List<Person> people = MockData.getPeople();
@@ -22,6 +27,12 @@ public class Lecture7 {
     System.out.println(ageCount);
   }
 
+  /**
+   * Given a List<Car>
+   *     filter the ones whose {@link Car#getColor()} is "yellow"
+   *     and transform {@link Car#getPrice()} into a double value
+   *     and get the one with the less price
+   * */
   @Test
   public void min() throws Exception {
     double cheapestYellowCar = MockData.getCars().stream()
@@ -31,17 +42,28 @@ public class Lecture7 {
     System.out.println(cheapestYellowCar);
   }
 
-  @Test
-  public void max() throws Exception {
-    double theMostExpensiveYellowCar = MockData.getCars().stream()
-            .filter(car -> car.getColor().equalsIgnoreCase("yellow"))
-            .mapToDouble(car -> car.getPrice())
-            .max()
-            .getAsDouble();
-    System.out.println(theMostExpensiveYellowCar);
-  }
+    /**
+     * Given a List<Car>
+     *     filter the ones whose {@link Car#getColor()} is "yellow"
+     *     and transform {@link Car#getPrice()} into a double value
+     *     and get the one with the highest price
+     * */
+    @Test
+    public void max() throws Exception {
+      double theMostExpensiveYellowCar = MockData.getCars().stream()
+              .filter(car -> car.getColor().equalsIgnoreCase("yellow"))
+              .mapToDouble(car -> car.getPrice())
+              .max()
+              .getAsDouble();
+      System.out.println(theMostExpensiveYellowCar);
+    }
 
-
+  /**
+   * Given a List<Car>
+   *     transform {@link Car#getPrice()} into a double value
+   *     and get average price
+   *     or return zero
+   * */
   @Test
   public void average() throws Exception {
     List<Car> cars = MockData.getCars();
@@ -52,6 +74,11 @@ public class Lecture7 {
     System.out.println(averagePrice);
   }
 
+  /**
+   * Given a List<Car>
+   *     transform {@link Car#getPrice()} into a double value
+   *     and compute the sum of all of prices
+   * */
   @Test
   public void sum() throws Exception {
     List<Car> cars = MockData.getCars();
@@ -64,6 +91,11 @@ public class Lecture7 {
 
   }
 
+  /**
+   * Given a List<Car>
+   *     transform {@link Car#getPrice()} into a double value
+   *     and compute the standard statistics
+   * */
   @Test
   public void statistics() throws Exception {
     List<Car> cars = MockData.getCars();
